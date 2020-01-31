@@ -14,11 +14,22 @@ npm install timeline-vuejs --save
 
 ```js
 // main.js
-import '../node_modules/timeline-vuejs/dist/timeline-vuejs.css'
+
+import Vue from "vue";
+import App from "./App";
+
+import "../node_modules/timeline-vuejs/dist/timeline-vuejs.css";
+
+Vue.config.productionTip = false;
+
+new Vue({
+  render: h => h(App)
+}).$mount("#app");
+
 ```
 
 ```html
-// component.vue
+// App.vue
 <script>
   import Timeline from 'timeline-vuejs'
 
